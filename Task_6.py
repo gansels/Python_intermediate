@@ -28,21 +28,23 @@ class Animals(ABC):
         Animals.total_weight += weight
 
     @abstractmethod
-
     def set_weight(self, new_weight):
         pass
 
     #Try to create an instance to make error
-    try:
-        animal = Animals(20)
-    except TypeError as m:
-        print(m)
+try:
+    animal = Animals(20)
+except TypeError as m:
+    print(f" Error: {m}")
 class Cat(Animals):
     def set_weight(self, new_weight):
-        Animals.total_weight -= self.weight
+        Animals.total_weight -=self.weight
         self.weight = new_weight
-        Animals.total_weight += new_weight
+        Animals.total_weight += self.weight
 cat = Cat(15)
-Cat1 = Cat(25)
+cat1 = Cat(25)
 
-print("Animal.total_weight")
+print("Total weight of all animals: " , Animals.total_weight)
+
+cat1.set_weight(20)
+print("Total weight after change of cat2: " , Animals.total_weight)
