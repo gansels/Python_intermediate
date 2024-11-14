@@ -16,7 +16,7 @@ def func_time(function):
 #creating decorator
 @func_time
 def create_func_time():
-    print(f" this is functioning: ")
+    print(f" time function is good: ")
     time.sleep(1)
 # Call the function
 create_func_time()
