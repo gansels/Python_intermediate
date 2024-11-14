@@ -6,9 +6,9 @@
 import time
 #decorator to create time and function using import time
 def func_time(function):
-    def control(*args, **kwargs):
+    def control():
         start = time.time()
-        result = function(*args, **kwargs)
+        result = function()
         end = time.time()
         print(f"Uplynulý čas {end - start:.4f} sec")
         return result
