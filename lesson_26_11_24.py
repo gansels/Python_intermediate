@@ -1,10 +1,3 @@
-class TimeMeasurement:
-    pass
-with TimeMeasurement() as t:
-    cislo = 1
-    for i in range(10000000):
-        cislo += i
-    print(cislo)
 import time
 
 
@@ -26,8 +19,8 @@ class TimeMeasurment:
         duration_time = self.end_time - self.start_time
         self.file.close()
 
-        print(f"Start to calculate the start time: (time.time(self.start_time)")
-        print(f"Start to calculate the End time: (time.time(self.end_time)")
+        print(f"Start to calculate the start : (self.start_time)")
+        print(f"Start to calculate the End time: (self.end_time)")
         print(f"lasted time{duration_time:.2f}second")
 
 
