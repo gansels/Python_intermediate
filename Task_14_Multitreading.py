@@ -32,8 +32,8 @@ def multiply():
 
 
 # threading
-thread_sum = ThreadWithReturnValue(caln_sum)
-thread_multi = ThreadWithReturnValue(multiply)
+thread_sum = ThreadWithReturnValue(target=caln_sum)
+thread_multi = ThreadWithReturnValue(target=multiply)
 
 # starting the thread
 thread_sum.start()
@@ -44,7 +44,7 @@ result_sum = thread_sum.join()
 result_1_multiply = thread_multi.join()
 
 # Print the result
-print(f"Sum of the calculation is:", result_sum)
+print(f"Sum of the calculation is:, {result_sum}")
 
-print(f"Multiplication of the value is:", result_1_multiply)
+print(f"Multiplication of the value is:, {result_1_multiply}")
 
