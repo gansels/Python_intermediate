@@ -5,7 +5,7 @@ import threading
 
 class ThreadWithReturnValue(threading.Thread):
     def __init__(self, target, args=()):
-        threading.Thread.__init__(self)
+        super().__init__()
         self.target = target
         self.args = args
         self._return = None
