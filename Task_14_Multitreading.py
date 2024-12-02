@@ -14,9 +14,8 @@ class ThreadWithReturnValue(threading.Thread):
         self._return = self.target(*self.args)
 
     def join(self):
-        threading.Thread.join(self)
+        super().join()
         return self._return
-
 
 # now write the func to calculate the sum
 def caln_sum():
